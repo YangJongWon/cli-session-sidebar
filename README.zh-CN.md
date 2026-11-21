@@ -1,8 +1,18 @@
+<div align="center">
+
 # CLI Session Sidebar
 
-[한국어](README.md) | **中文** | [日本語](README.ja.md) | [English](README.en.md)
+**每个任务一个 CLI 会话，就在侧边栏。**
 
-在侧边栏运行 CLI。每个任务保留自己的会话、输出和恢复命令。
+在侧边栏运行 CLI。<br>
+每个任务保留自己的会话、输出和恢复命令。
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![VS Code · Cursor 1.106+](https://img.shields.io/badge/VS%20Code%20%C2%B7%20Cursor-%E2%89%A51.106-007ACC?logo=visualstudiocode&logoColor=white)
+
+[English](README.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · **简体中文**
+
+</div>
 
 扩展 ID 是 `local.cli-session-sidebar`。发布者字段是 `local`。已经保存的任务和设置都使用这个 ID，所以在创建 Marketplace 账户之前不要更改。公开上架时，先创建 [Marketplace 发布者](https://marketplace.visualstudio.com/manage)，再把 `package.json` 里的 `publisher` 改成该账户。更改发布者会改变扩展 ID，原有的存储文件夹不会跟着迁移。
 

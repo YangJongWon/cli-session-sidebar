@@ -1,50 +1,58 @@
+<div align="center">
+
 # CLI Session Sidebar
 
-**한국어** | [中文](README.zh-CN.md) | [日本語](README.ja.md) | [English](README.en.md)
+**A CLI session for every task, in the sidebar.**
 
-사이드바에서 CLI를 실행하고, 작업마다 세션을 유지하고 다시 이어갑니다.
+Run a CLI from the sidebar.<br>
+Each task keeps its own session, output, and resume command.
 
-Run a CLI from the sidebar. Each task keeps its own session, output, and resume command.
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![VS Code · Cursor 1.106+](https://img.shields.io/badge/VS%20Code%20%C2%B7%20Cursor-%E2%89%A51.106-007ACC?logo=visualstudiocode&logoColor=white)
 
-확장 ID는 `local.cli-session-sidebar`입니다. 게시자 필드는 `local`입니다. 이미 이 ID로 저장된 작업과 설정이 이 폴더를 쓰므로, 마켓 계정을 만들기 전에는 바꾸지 않습니다. 공개 등록할 때는 [Marketplace 게시자](https://marketplace.visualstudio.com/manage)를 만든 뒤 `package.json`의 `publisher`를 그 계정과 같게 바꿉니다. 게시자를 바꾸면 확장 ID가 바뀌고, 기존 저장 폴더는 따라오지 않습니다.
+**English** · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh-CN.md)
 
-## 할 수 있는 일
+</div>
 
-- Claude Code, Codex, Cursor CLI, OpenCode, Antigravity, Devin을 눌러 바로 시작합니다. Windows에서는 PowerShell, PowerShell 7, Git Bash, 명령 프롬프트가 함께 나옵니다. Mac에서는 zsh와 Homebrew가 그 자리에 나옵니다.
-- 커맨드 관리에서 기본 커맨드의 이름, 실행 프로그램, 인수, 재개 명령, 아이콘을 고칠 수 있습니다. 아이콘은 기본 커맨드마다 정해져 있고, 그 밖에는 이름에서 글자와 색을 만듭니다. 글자, 색, 이미지 파일로 바꿀 수 있습니다. 리셋은 처음 제공된 값으로 되돌립니다.
-- 같은 CLI로 이름 다른 작업을 여러 개 두고, 탭에서 전환합니다.
-- 창을 닫아도 실행 중인 작업은 별도 백엔드에 남습니다. 다시 열면 그 프로세스에 다시 연결합니다.
-- 최근 작업 재개와 지정 ID 재개는 CLI 명령을 그대로 사용합니다. 확장이 권한 생략 옵션을 붙이지 않습니다.
-- 작업 목록은 날짜별로 보존하고 복원합니다. 출력 검색과 작업 검색이 있습니다.
-- 화면 언어는 자동, 한국어, 일본어, 중국어, 영어입니다.
-- 터미널에 나온 파일 경로는 눌러 에디터에서 엽니다.
+The extension id is `local.cli-session-sidebar`. The publisher field is `local`. Saved tasks and settings already use this id, so leave it unchanged until you create a Marketplace account. To publish, create a [Marketplace publisher](https://marketplace.visualstudio.com/manage) and set `publisher` in `package.json` to that account. Changing the publisher changes the extension id, and the existing storage folder does not follow.
 
-## 처음 실행과 설치
+## What it does
 
-프로그램을 찾지 못하면 터미널 위에 이유와 공식 설치 명령을 보여 줍니다. **설치**를 누르면 그 명령을 확인한 뒤에만 실행합니다. 명령을 복사해 직접 실행할 수도 있습니다.
+- Start Claude Code, Codex, Cursor CLI, OpenCode, Antigravity, or Devin with one click. On Windows, PowerShell, PowerShell 7, Git Bash, and Command Prompt appear in that list. On Mac, zsh and Homebrew take that place.
+- In command management, edit a built-in command's name, program, arguments, resume commands, and icon. Known built-ins have a preset icon. Other commands take letters and a color from the name. You can change the letters, color, or image file. Reset restores the original values.
+- Keep several named tasks for the same CLI and switch them with tabs.
+- A running task stays in a separate backend after the window closes. Opening the window again reconnects to that process.
+- Resume recent work and resume a specific id use the CLI command as written. The extension does not add a permission-skipping option.
+- The task list can preserve and restore a whole day. You can search output and search tasks.
+- The interface language is automatic, Korean, Japanese, Chinese, or English.
+- File paths shown in the terminal open in the editor when clicked.
 
-Windows에서만 설치 명령을 제공합니다. 다른 운영체제에서는 공식 설치 방법을 확인한 뒤 실행 프로그램 경로를 입력합니다. 확장은 로그인을 대신하지 않습니다.
+## First run and install
 
-Cursor CLI의 실행 이름은 `agent`입니다.
+If the program is missing, the reason and the official install command appear above the terminal. **Install** runs that command only after you confirm. You can also copy the command and run it yourself.
 
-## 요구 사항
+Install commands are offered only on Windows. On other systems, check the official install method and enter the program path. The extension does not sign in for you.
 
-- VS Code 또는 Cursor 1.106 이상
-- 설치 명령과 기본 셸 안내는 Windows 기준입니다
+The Cursor CLI program name is `agent`.
 
-## 개발
+## Requirements
+
+- VS Code or Cursor 1.106 or newer
+- Install commands and the default shell notes follow Windows
+
+## Development
 
 ```bash
 npm install
 npm test
 ```
 
-화면 검사는 Edge가 있을 때 `PLAYWRIGHT_CHANNEL=msedge npm run check:ui`로 실행합니다. 확장 개발 호스트는 실행 구성 **Run CLI Session Sidebar**로 엽니다.
+UI checks run with `PLAYWRIGHT_CHANNEL=msedge npm run check:ui` when Edge is installed. The extension development host opens from the **Run CLI Session Sidebar** launch configuration.
 
-## 범위
+## Scope
 
-사이드바끼리의 이동은 VS Code 드래그를 사용합니다. 사이드바와 편집기 탭 사이는 ⋯ 메뉴로 전환합니다. 출력 기록을 다시 보여주는 것과, 실행 중이던 프로세스에 다시 연결하는 것, 재개 명령으로 대화를 잇는 것은 서로 다른 동작입니다.
+Moving between sidebars uses VS Code drag. Switching between the sidebar and an editor tab uses the ⋯ menu. Showing saved output again, reconnecting to a process that was still running, and continuing a conversation with a resume command are different actions.
 
-## 라이선스
+## License
 
 [MIT](LICENSE)

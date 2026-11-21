@@ -1,8 +1,18 @@
+<div align="center">
+
 # CLI Session Sidebar
 
-[한국어](README.md) | [中文](README.zh-CN.md) | **日本語** | [English](README.en.md)
+**作業ごとの CLI セッションを、サイドバーに。**
 
-サイドバーで CLI を起動し、作業ごとにセッション、出力、再開コマンドを保持します。
+サイドバーで CLI を起動し、<br>
+作業ごとにセッション、出力、再開コマンドを保持します。
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![VS Code · Cursor 1.106+](https://img.shields.io/badge/VS%20Code%20%C2%B7%20Cursor-%E2%89%A51.106-007ACC?logo=visualstudiocode&logoColor=white)
+
+[English](README.md) · [한국어](README.ko.md) · **日本語** · [简体中文](README.zh-CN.md)
+
+</div>
 
 拡張機能 ID は `local.cli-session-sidebar` です。発行者フィールドは `local` です。保存済みの作業と設定がすでにこの ID を使うため、Marketplace アカウントを作るまでは変更しません。公開登録するときは [Marketplace 発行者](https://marketplace.visualstudio.com/manage) を作り、`package.json` の `publisher` をそのアカウントに合わせます。発行者を変えると拡張機能 ID が変わり、既存の保存フォルダは引き継がれません。
 
