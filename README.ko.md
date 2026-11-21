@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="media/icon.png" width="128" alt="CLI Session Sidebar">
+<img src="media/icon.png" width="128" alt="CLI Sidebar">
 
-# CLI Session Sidebar
+# CLI Sidebar
 
 **사이드바에서, 작업마다 CLI 세션.**
 
@@ -16,7 +16,7 @@
 
 </div>
 
-확장 ID는 `yangjongwon.cli-session-sidebar`입니다. Open VSX 네임스페이스 `yangjongwon`으로 게시합니다.
+확장 ID는 `yangjongwon.cli-sidebar`입니다. Open VSX 네임스페이스 `yangjongwon`으로 게시합니다.
 
 ## 할 수 있는 일
 
@@ -49,7 +49,7 @@ npm install
 npm test
 ```
 
-화면 검사는 Edge가 있을 때 `PLAYWRIGHT_CHANNEL=msedge npm run check:ui`로 실행합니다. 확장 개발 호스트는 실행 구성 **Run CLI Session Sidebar**로 엽니다.
+화면 검사는 Edge가 있을 때 `PLAYWRIGHT_CHANNEL=msedge npm run check:ui`로 실행합니다. 확장 개발 호스트는 실행 구성 **Run CLI Sidebar**로 엽니다.
 
 ## 범위
 

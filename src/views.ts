@@ -64,7 +64,7 @@ export function registerViews(context: vscode.ExtensionContext, controller: Cont
     }
     editorPanel = vscode.window.createWebviewPanel(
       'cliSessionSidebar.editor',
-      'CLI Sessions',
+      'CLI Sidebar',
       vscode.ViewColumn.Active,
       options,
     );
@@ -139,7 +139,7 @@ export function registerViews(context: vscode.ExtensionContext, controller: Cont
         { label: 'Secondary Sidebar', value: 'secondary' },
         { label: t('editorTab'), value: 'editor' },
         { label: t('keepLayout'), value: 'auto' },
-      ], { title: 'CLI Sessions 표시 위치' }))?.value;
+      ], { title: 'CLI Sidebar 표시 위치' }))?.value;
       if (selected) await setLocation(selected);
     }),
     vscode.commands.registerCommand('cliSessionSidebar.stopBackend', async () => {

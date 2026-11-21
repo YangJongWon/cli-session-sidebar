@@ -8,7 +8,7 @@ import { registerViews } from './views';
 let controller: Controller | undefined;
 
 export function activate(context: vscode.ExtensionContext): void {
-  const channel = vscode.window.createOutputChannel('CLI Session Sidebar');
+  const channel = vscode.window.createOutputChannel('CLI Sidebar');
   const storageDir = context.globalStorageUri.fsPath;
   fs.mkdirSync(storageDir, { recursive: true });
   let openInEditor: () => void = () => undefined;
@@ -47,7 +47,7 @@ export function activate(context: vscode.ExtensionContext): void {
       void focusSidebar();
     },
     setLocation: (location) => setLocation(location),
-    openSettings: () => { void vscode.commands.executeCommand('workbench.action.openSettings', '@ext:yangjongwon.cli-session-sidebar'); },
+    openSettings: () => { void vscode.commands.executeCommand('workbench.action.openSettings', '@ext:yangjongwon.cli-sidebar'); },
     locale: () => vscode.env.language,
     setDirectInput: (focused) => {
       void vscode.commands.executeCommand('setContext', 'cliSessionSidebar.directInput', focused);

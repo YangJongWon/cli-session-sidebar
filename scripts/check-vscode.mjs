@@ -105,7 +105,7 @@ try {
   const panelIsOpen = async (part) => {
     await page.waitForFunction((selector) => {
       const part = document.querySelector(selector);
-      return Boolean(part && part.getBoundingClientRect().width > 0 && part.getBoundingClientRect().height > 0 && part.textContent.includes('CLI Sessions'));
+      return Boolean(part && part.getBoundingClientRect().width > 0 && part.getBoundingClientRect().height > 0 && part.textContent.includes('CLI Sidebar'));
     }, selectors.parts[part], { timeout: 20000 });
   };
   const getFrame = async () => {
@@ -115,7 +115,7 @@ try {
       }
       await page.waitForTimeout(100);
     }
-    throw new Error('CLI Sessions webview did not render');
+    throw new Error('CLI Sidebar webview did not render');
   };
   await call('cliSessionSidebar.setLocation', 'primary');
   await panelIsOpen('sidebar');

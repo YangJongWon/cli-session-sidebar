@@ -1,6 +1,6 @@
 {
-  "name": "cli-session-sidebar",
-  "displayName": "CLI Session Sidebar",
+  "name": "cli-sidebar",
+  "displayName": "CLI Sidebar",
   "description": "사이드바에서 CLI를 실행하고, 작업마다 세션을 유지하고 재개합니다. Run a CLI from the sidebar and keep a named session you can resume.",
   "version": "0.1.2",
   "publisher": "yangjongwon",
@@ -36,7 +36,7 @@
   ],
   "contributes": {
     "configuration": {
-      "title": "CLI Session Sidebar",
+      "title": "CLI Sidebar",
       "properties": {
         "cliSessionSidebar.location": {
           "type": "string",
@@ -62,14 +62,14 @@
       "activitybar": [
         {
           "id": "cli-session-sidebar",
-          "title": "CLI Sessions",
+          "title": "CLI Sidebar",
           "icon": "media/icon.svg"
         }
       ],
       "secondarySidebar": [
         {
           "id": "cli-session-sidebar-secondary",
-          "title": "CLI Sessions",
+          "title": "CLI Sidebar",
           "icon": "media/icon.svg"
         }
       ]
@@ -80,35 +80,35 @@
           "type": "webview",
           "id": "cliSessionSidebar.main",
           "name": "Sessions",
-          "contextualTitle": "CLI Sessions"
+          "contextualTitle": "CLI Sidebar"
         }
       ]
     },
     "commands": [
       {
         "command": "cliSessionSidebar.openInEditor",
-        "title": "CLI Sessions: 편집기 탭으로 열기",
-        "category": "CLI Sessions"
+        "title": "CLI Sidebar: 편집기 탭으로 열기",
+        "category": "CLI Sidebar"
       },
       {
         "command": "cliSessionSidebar.focusSidebar",
-        "title": "CLI Sessions: 사이드바로 이동",
-        "category": "CLI Sessions"
+        "title": "CLI Sidebar: 사이드바로 이동",
+        "category": "CLI Sidebar"
       },
       {
         "command": "cliSessionSidebar.setLocation",
-        "title": "CLI Sessions: 표시 위치 선택",
-        "category": "CLI Sessions"
+        "title": "CLI Sidebar: 표시 위치 선택",
+        "category": "CLI Sidebar"
       },
       {
         "command": "cliSessionSidebar.stopBackend",
-        "title": "CLI Sessions: 실행 백엔드 종료",
-        "category": "CLI Sessions"
+        "title": "CLI Sidebar: 실행 백엔드 종료",
+        "category": "CLI Sidebar"
       },
       {
         "command": "cliSessionSidebar.sendKey",
-        "title": "CLI Sessions: 직접 입력 키 보내기",
-        "category": "CLI Sessions"
+        "title": "CLI Sidebar: 직접 입력 키 보내기",
+        "category": "CLI Sidebar"
       }
     ],
     "keybindings": [

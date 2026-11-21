@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="media/icon.png" width="128" alt="CLI Session Sidebar">
+<img src="media/icon.png" width="128" alt="CLI Sidebar">
 
-# CLI Session Sidebar
+# CLI Sidebar
 
 **作業ごとの CLI セッションを、サイドバーに。**
 
@@ -16,7 +16,7 @@
 
 </div>
 
-拡張機能 ID は `yangjongwon.cli-session-sidebar` です。Open VSX の `yangjongwon` 名前空間で公開しています。
+拡張機能 ID は `yangjongwon.cli-sidebar` です。Open VSX の `yangjongwon` 名前空間で公開しています。
 
 ## できること
 
@@ -49,7 +49,7 @@ npm install
 npm test
 ```
 
-画面の確認は、Edge があるとき `PLAYWRIGHT_CHANNEL=msedge npm run check:ui` で実行します。拡張機能の開発ホストは、起動構成 **Run CLI Session Sidebar** で開きます。
+画面の確認は、Edge があるとき `PLAYWRIGHT_CHANNEL=msedge npm run check:ui` で実行します。拡張機能の開発ホストは、起動構成 **Run CLI Sidebar** で開きます。
 
 ## 範囲
 

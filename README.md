@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="media/icon.png" width="128" alt="CLI Session Sidebar">
+<img src="media/icon.png" width="128" alt="CLI Sidebar">
 
-# CLI Session Sidebar
+# CLI Sidebar
 
 **A CLI session for every task, in the sidebar.**
 
@@ -16,7 +16,7 @@ Each task keeps its own session, output, and resume command.
 
 </div>
 
-The extension id is `yangjongwon.cli-session-sidebar`. It is published on Open VSX under the `yangjongwon` namespace.
+The extension id is `yangjongwon.cli-sidebar`. It is published on Open VSX under the `yangjongwon` namespace.
 
 ## What it does
 
@@ -49,7 +49,7 @@ npm install
 npm test
 ```
 
-UI checks run with `PLAYWRIGHT_CHANNEL=msedge npm run check:ui` when Edge is installed. The extension development host opens from the **Run CLI Session Sidebar** launch configuration.
+UI checks run with `PLAYWRIGHT_CHANNEL=msedge npm run check:ui` when Edge is installed. The extension development host opens from the **Run CLI Sidebar** launch configuration.
 
 ## Scope
 

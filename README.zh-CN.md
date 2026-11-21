@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="media/icon.png" width="128" alt="CLI Session Sidebar">
+<img src="media/icon.png" width="128" alt="CLI Sidebar">
 
-# CLI Session Sidebar
+# CLI Sidebar
 
 **每个任务一个 CLI 会话，就在侧边栏。**
 
@@ -16,7 +16,7 @@
 
 </div>
 
-扩展 ID 是 `yangjongwon.cli-session-sidebar`。它发布在 Open VSX 的 `yangjongwon` 命名空间下。
+扩展 ID 是 `yangjongwon.cli-sidebar`。它发布在 Open VSX 的 `yangjongwon` 命名空间下。
 
 ## 能做什么
 
@@ -49,7 +49,7 @@ npm install
 npm test
 ```
 
-安装了 Edge 时，用 `PLAYWRIGHT_CHANNEL=msedge npm run check:ui` 做界面检查。扩展开发主机通过启动配置 **Run CLI Session Sidebar** 打开。
+安装了 Edge 时，用 `PLAYWRIGHT_CHANNEL=msedge npm run check:ui` 做界面检查。扩展开发主机通过启动配置 **Run CLI Sidebar** 打开。
 
 ## 范围
 

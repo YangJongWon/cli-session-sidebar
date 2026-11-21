@@ -21,7 +21,7 @@ export function webviewHtml(webview: vscode.Webview, extensionUri: vscode.Uri): 
 <meta http-equiv="Content-Security-Policy" content="${csp}" />
 <link rel="stylesheet" href="${xterm}" />
 <link rel="stylesheet" href="${style}" />
-<title>CLI Sessions</title>
+<title>CLI Sidebar</title>
 </head>
 <body>
 <div id="app"></div>
