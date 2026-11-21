@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="media/icon.png" width="128" alt="CLI Session Sidebar">
+
 # CLI Session Sidebar
 
 **사이드바에서, 작업마다 CLI 세션.**

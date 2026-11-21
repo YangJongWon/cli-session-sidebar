@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="media/icon.png" width="128" alt="CLI Session Sidebar">
+
 # CLI Session Sidebar
 
 **作業ごとの CLI セッションを、サイドバーに。**
