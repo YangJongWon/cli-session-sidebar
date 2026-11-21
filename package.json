@@ -1,8 +1,8 @@
 {
   "name": "cli-sidebar",
   "displayName": "CLI Sidebar",
-  "description": "사이드바에서 CLI를 실행하고, 작업마다 세션을 유지하고 재개합니다. Run a CLI from the sidebar and keep a named session you can resume.",
-  "version": "0.1.2",
+  "description": "Run a CLI from the sidebar and keep a named session you can resume. 사이드바에서 CLI를 실행하고, 작업마다 세션을 유지하고 재개합니다.",
+  "version": "0.1.3",
   "publisher": "yangjongwon",
   "icon": "media/icon.png",
   "license": "MIT",
