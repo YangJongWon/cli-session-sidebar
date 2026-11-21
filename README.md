@@ -1,5 +1,7 @@
 # CLI Session Sidebar
 
+**한국어** | [中文](README.zh-CN.md) | [日本語](README.ja.md) | [English](README.en.md)
+
 사이드바에서 CLI를 실행하고, 작업마다 세션을 유지하고 다시 이어갑니다.
 
 Run a CLI from the sidebar. Each task keeps its own session, output, and resume command.
