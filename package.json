@@ -1,0 +1,141 @@
+{
+  "name": "cli-session-sidebar",
+  "displayName": "CLI Session Sidebar",
+  "description": "사이드바에서 CLI를 실행하고, 작업마다 세션을 유지하고 재개합니다. Run a CLI from the sidebar and keep a named session you can resume.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YangJongWon/cli-session-sidebar.git"
+  },
+  "homepage": "https://github.com/YangJongWon/cli-session-sidebar",
+  "bugs": {
+    "url": "https://github.com/YangJongWon/cli-session-sidebar/issues"
+  },
+  "keywords": [
+    "cli",
+    "terminal",
+    "session",
+    "claude",
+    "codex",
+    "cursor"
+  ],
+  "engines": {
+    "vscode": "^1.106.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onView:cliSessionSidebar.main",
+    "onCommand:cliSessionSidebar.openInEditor",
+    "onWebviewPanel:cliSessionSidebar.editor"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "CLI Session Sidebar",
+      "properties": {
+        "cliSessionSidebar.location": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "primary",
+            "secondary",
+            "editor"
+          ],
+          "enumItemLabels": [
+            "현재 배치 유지",
+            "Primary Sidebar",
+            "Secondary Sidebar",
+            "편집기 탭"
+          ],
+          "default": "auto",
+          "scope": "window",
+          "description": "값을 변경하면 선택한 위치로 이동합니다. 이후 드래그한 배치는 VS Code가 보존합니다. 기본 위치는 Primary Sidebar입니다."
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "cli-session-sidebar",
+          "title": "CLI Sessions",
+          "icon": "media/icon.svg"
+        }
+      ],
+      "secondarySidebar": [
+        {
+          "id": "cli-session-sidebar-secondary",
+          "title": "CLI Sessions",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "cli-session-sidebar": [
+        {
+          "type": "webview",
+          "id": "cliSessionSidebar.main",
+          "name": "Sessions",
+          "contextualTitle": "CLI Sessions"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "cliSessionSidebar.openInEditor",
+        "title": "CLI Sessions: 편집기 탭으로 열기",
+        "category": "CLI Sessions"
+      },
+      {
+        "command": "cliSessionSidebar.focusSidebar",
+        "title": "CLI Sessions: 사이드바로 이동",
+        "category": "CLI Sessions"
+      },
+      {
+        "command": "cliSessionSidebar.setLocation",
+        "title": "CLI Sessions: 표시 위치 선택",
+        "category": "CLI Sessions"
+      },
+      {
+        "command": "cliSessionSidebar.stopBackend",
+        "title": "CLI Sessions: 실행 백엔드 종료",
+        "category": "CLI Sessions"
+      },
+      {
+        "command": "cliSessionSidebar.sendKey",
+        "title": "CLI Sessions: 직접 입력 키 보내기",
+        "category": "CLI Sessions"
+      }
+    ],
+    "keybindings": [
+      { "command": "cliSessionSidebar.sendKey", "key": "up", "when": "cliSessionSidebar.directInput && (focusedView == cliSessionSidebar.main || activeWebviewPanelId == cliSessionSidebar.editor)", "args": "\u001b[A" },
+      { "command": "cliSessionSidebar.sendKey", "key": "down", "when": "cliSessionSidebar.directInput && (focusedView == cliSessionSidebar.main || activeWebviewPanelId == cliSessionSidebar.editor)", "args": "\u001b[B" },
+      { "command": "cliSessionSidebar.sendKey", "key": "right", "when": "cliSessionSidebar.directInput && (focusedView == cliSessionSidebar.main || activeWebviewPanelId == cliSessionSidebar.editor)", "args": "\u001b[C" },
+      { "command": "cliSessionSidebar.sendKey", "key": "left", "when": "cliSessionSidebar.directInput && (focusedView == cliSessionSidebar.main || activeWebviewPanelId == cliSessionSidebar.editor)", "args": "\u001b[D" }
+    ]
+  },
+  "scripts": {
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "check": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.webview.json",
+    "check:ui": "npm run compile && node scripts/check-ui.mjs",
+    "test": "npm run compile && node dist/selftest.js && node dist/controllerTest.js",
+    "smoke": "npm run compile && node dist/smoke.js"
+  },
+  "dependencies": {
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/addon-search": "0.15.0",
+    "@xterm/xterm": "^5.5.0",
+    "node-pty": "1.2.0-beta.18"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.25.12",
+    "playwright": "^1.63.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,12 @@
+src/**
+esbuild.js
+tsconfig.json
+tsconfig.webview.json
+scripts/**
+**/*.map
+.gitignore
+.git/**
+check-output/**
+dist/controllerTest.js
+dist/selftest.js
+dist/smoke.js
