@@ -14,7 +14,7 @@
 
 </div>
 
-확장 ID는 `local.cli-session-sidebar`입니다. 게시자 필드는 `local`입니다. 이미 이 ID로 저장된 작업과 설정이 이 폴더를 쓰므로, 마켓 계정을 만들기 전에는 바꾸지 않습니다. 공개 등록할 때는 [Marketplace 게시자](https://marketplace.visualstudio.com/manage)를 만든 뒤 `package.json`의 `publisher`를 그 계정과 같게 바꿉니다. 게시자를 바꾸면 확장 ID가 바뀌고, 기존 저장 폴더는 따라오지 않습니다.
+확장 ID는 `yangjongwon.cli-session-sidebar`입니다. Open VSX 네임스페이스 `yangjongwon`으로 게시합니다.
 
 ## 할 수 있는 일
 

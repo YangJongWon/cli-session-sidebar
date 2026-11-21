@@ -14,7 +14,7 @@
 
 </div>
 
-扩展 ID 是 `local.cli-session-sidebar`。发布者字段是 `local`。已经保存的任务和设置都使用这个 ID，所以在创建 Marketplace 账户之前不要更改。公开上架时，先创建 [Marketplace 发布者](https://marketplace.visualstudio.com/manage)，再把 `package.json` 里的 `publisher` 改成该账户。更改发布者会改变扩展 ID，原有的存储文件夹不会跟着迁移。
+扩展 ID 是 `yangjongwon.cli-session-sidebar`。它发布在 Open VSX 的 `yangjongwon` 命名空间下。
 
 ## 能做什么
 

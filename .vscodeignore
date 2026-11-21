@@ -10,3 +10,15 @@ check-output/**
 dist/controllerTest.js
 dist/selftest.js
 dist/smoke.js
+debug.log
+Untitled
+docs/**
+.vscode/**
+pnpm-lock.yaml
+pnpm-workspace.yaml
+package-lock.json
+node_modules/**
+!node_modules/node-pty/
+!node_modules/node-pty/**
+!node_modules/node-addon-api/
+!node_modules/node-addon-api/**

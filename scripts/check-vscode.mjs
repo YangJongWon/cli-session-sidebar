@@ -10,6 +10,9 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { chromium } from 'playwright';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const manifest = JSON.parse(readFileSync(path.join(root, 'package.json'), 'utf8'));
+const extensionId = `${manifest.publisher}.${manifest.name}`;
+const extensionFolder = `${extensionId}-${manifest.version}`;
 const handide = process.env.HANDIDE_ROOT;
 if (!handide) throw new Error('Set HANDIDE_ROOT to run the optional handide integration check.');
 const { killTree } = await import(pathToFileURL(path.join(handide, '.claude/skills/mobilize-editor/scripts/lib/proxy.mjs')));
@@ -18,13 +21,13 @@ const selectors = JSON.parse(readFileSync(path.join(handide, 'layer/selectors.js
 const out = path.join(root, 'check-output');
 mkdirSync(out, { recursive: true });
 const runDir = mkdtempSync(path.join(out, 'vscode-'));
-const extensionDir = path.join(runDir, 'data/extensions/local.cli-session-sidebar-0.1.0');
+const extensionDir = path.join(runDir, 'data/extensions', extensionFolder);
 mkdirSync(extensionDir, { recursive: true });
 for (const name of ['package.json', 'dist', 'media']) cpSync(path.join(root, name), path.join(extensionDir, name), { recursive: true });
 for (const name of ['node-pty', 'node-addon-api']) cpSync(path.join(root, 'node_modules', name), path.join(extensionDir, 'node_modules', name), { recursive: true });
 const location = pathToFileURL(extensionDir);
 writeFileSync(path.join(runDir, 'data/extensions/extensions.json'), JSON.stringify([{
-  identifier: { id: 'local.cli-session-sidebar' }, version: '0.1.0', relativeLocation: 'local.cli-session-sidebar-0.1.0',
+  identifier: { id: extensionId }, version: manifest.version, relativeLocation: extensionFolder,
   location: { $mid: 1, fsPath: extensionDir, path: location.pathname, scheme: 'file' }, metadata: { source: 'vsix' },
 }]));
 let proxy, browser;

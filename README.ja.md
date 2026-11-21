@@ -14,7 +14,7 @@
 
 </div>
 
-拡張機能 ID は `local.cli-session-sidebar` です。発行者フィールドは `local` です。保存済みの作業と設定がすでにこの ID を使うため、Marketplace アカウントを作るまでは変更しません。公開登録するときは [Marketplace 発行者](https://marketplace.visualstudio.com/manage) を作り、`package.json` の `publisher` をそのアカウントに合わせます。発行者を変えると拡張機能 ID が変わり、既存の保存フォルダは引き継がれません。
+拡張機能 ID は `yangjongwon.cli-session-sidebar` です。Open VSX の `yangjongwon` 名前空間で公開しています。
 
 ## できること
 

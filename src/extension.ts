@@ -47,7 +47,7 @@ export function activate(context: vscode.ExtensionContext): void {
       void focusSidebar();
     },
     setLocation: (location) => setLocation(location),
-    openSettings: () => { void vscode.commands.executeCommand('workbench.action.openSettings', '@ext:local.cli-session-sidebar'); },
+    openSettings: () => { void vscode.commands.executeCommand('workbench.action.openSettings', '@ext:yangjongwon.cli-session-sidebar'); },
     locale: () => vscode.env.language,
     setDirectInput: (focused) => {
       void vscode.commands.executeCommand('setContext', 'cliSessionSidebar.directInput', focused);

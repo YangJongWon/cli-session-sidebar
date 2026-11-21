@@ -14,7 +14,7 @@ Each task keeps its own session, output, and resume command.
 
 </div>
 
-The extension id is `local.cli-session-sidebar`. The publisher field is `local`. Saved tasks and settings already use this id, so leave it unchanged until you create a Marketplace account. To publish, create a [Marketplace publisher](https://marketplace.visualstudio.com/manage) and set `publisher` in `package.json` to that account. Changing the publisher changes the extension id, and the existing storage folder does not follow.
+The extension id is `yangjongwon.cli-session-sidebar`. It is published on Open VSX under the `yangjongwon` namespace.
 
 ## What it does
 
